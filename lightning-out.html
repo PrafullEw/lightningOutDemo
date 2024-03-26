@@ -15,11 +15,11 @@
 		const appName = "c:AddPaymentInStripeApp";
 		const componentName = "c:lightningOutDemoCmp";
 		const lightningEndpoint = "https://floridafarmbureau--cetrixdev.sandbox.my.site.com/Demo";
-		const targetElement = document.querySelector("{data-lightning-out}");
+		const targetElement = document.querySelector("[data-lightning-out]");
 		const componentAttributes = {};
 
-		$lightning.use(appName, function(){
-			$lightning.createComponent(
+		$Lightning.use(appName, function(){
+			$Lightning.createComponent(
 				componentName,
 				componentAttributes,
 				targetElement,
