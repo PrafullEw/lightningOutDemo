@@ -1,0 +1,34 @@
+<html>
+	<style>
+		.slds-card{
+			background: light-gray;
+		}
+		p{
+			color: green;
+			font-size: large;
+			font-weight: 600;
+		}
+	</style>
+	<script src="https://floridafarmbureau--cetrixdev.sandbox.my.site.com/Demo/lightning/lightning.out.js"></script>
+	<div data-lightning-out="true"></div>
+	<script>
+		const appName = "c:AddPaymentInStripeApp";
+		const componentName = "c:lightningOutDemoCmp";
+		const lightningEndpoint = "https://floridafarmbureau--cetrixdev.sandbox.my.site.com/Demo";
+		const targetElement = document.querySelector("[data-lightning-out]");
+		const componentAttributes = {};
+
+		$Lightning.use(appName, function(){
+			$Lightning.createComponent(
+				componentName,
+				componentAttributes,
+				targetElement,
+				function(cmp){
+					console.log("lightning component created!!");
+				}
+			);
+		},
+		lightningEndpoint
+		);
+	</script>
+</html>
